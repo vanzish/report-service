@@ -10,18 +10,30 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
+    <Compile Remove="wwwroot\**" />
+    <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="wwwroot\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="1.50.4" />
-    <PackageReference Include="Facebook" Version="7.0.6" />
-    <PackageReference Include="iTextSharp" Version="5.5.13" />
-    <PackageReference Include="json-serialize" Version="1.1.2" />
+    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\app.config.transform" />
+    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlCommand.xml" />
+    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlCommandBuilder.xml" />
+    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlConnection.xml" />
+    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlConnectionStringBuilder.xml" />
+    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlDataAdapter.xml" />
+    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlDataReader.xml" />
+    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlException.xml" />
+    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlHelper.xml" />
+    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlParameter.xml" />
+    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlParameterCollection.xml" />
+    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlTransaction.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AppCenter.Push" Version="1.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
-    <PackageReference Include="MySql.Data" Version="6.10.6" />
-    <PackageReference Include="Npgsql" Version="3.2.6" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,10 +41,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="MonthNameResolver">
-      <HintPath>MonthResolver\MonthNameResolver.dll</HintPath>
-      <Private>true</Private>
-    </Reference>
+    <ProjectReference Include="..\ReportService.Business\ReportService.Business.csproj" />
   </ItemGroup>
 
 </Project>

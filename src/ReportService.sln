@@ -1,11 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2003
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportService", "ReportService\ReportService.csproj", "{231E862D-6509-4701-B706-B7E17887C9B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReportService", "ReportService\ReportService.csproj", "{231E862D-6509-4701-B706-B7E17887C9B2}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{CA96146C-735D-4388-BCB2-CDEF1564E951}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportService.Tests", "ReportService.Tests\ReportService.Tests.csproj", "{A2B886EF-F97E-4003-B5C5-7F5167F6D750}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportService.Entities", "ReportService.Entities\ReportService.Entities.csproj", "{A3A20B6F-C945-4855-81C2-6D1AEA7BE43D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportService.Data", "ReportService.Data\ReportService.Data.csproj", "{EFAED401-CB87-4615-81BD-FBDB2A24711F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportService.Business", "ReportService.Business\ReportService.Business.csproj", "{39EB3C30-F6A1-40D5-BD62-DE948D978E49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +29,22 @@ Global
 		{CA96146C-735D-4388-BCB2-CDEF1564E951}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA96146C-735D-4388-BCB2-CDEF1564E951}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA96146C-735D-4388-BCB2-CDEF1564E951}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2B886EF-F97E-4003-B5C5-7F5167F6D750}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2B886EF-F97E-4003-B5C5-7F5167F6D750}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2B886EF-F97E-4003-B5C5-7F5167F6D750}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2B886EF-F97E-4003-B5C5-7F5167F6D750}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3A20B6F-C945-4855-81C2-6D1AEA7BE43D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3A20B6F-C945-4855-81C2-6D1AEA7BE43D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3A20B6F-C945-4855-81C2-6D1AEA7BE43D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3A20B6F-C945-4855-81C2-6D1AEA7BE43D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFAED401-CB87-4615-81BD-FBDB2A24711F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFAED401-CB87-4615-81BD-FBDB2A24711F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFAED401-CB87-4615-81BD-FBDB2A24711F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFAED401-CB87-4615-81BD-FBDB2A24711F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39EB3C30-F6A1-40D5-BD62-DE948D978E49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39EB3C30-F6A1-40D5-BD62-DE948D978E49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39EB3C30-F6A1-40D5-BD62-DE948D978E49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39EB3C30-F6A1-40D5-BD62-DE948D978E49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
