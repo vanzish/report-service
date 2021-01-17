@@ -3,6 +3,7 @@ using ReportService.Data.Interfaces;
 using ReportService.Entities.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 
 namespace ReportService.Data.Services
 {
@@ -12,11 +13,14 @@ namespace ReportService.Data.Services
         private readonly IAccountingService _accountingService;
         private readonly IHumanResourceService _humanResourceService;
 
-        public EmployeeService(string connectionString, IAccountingService accountingService, IHumanResourceService humanResourceService)
+        public EmployeeService(
+            IAccountingService accountingService,
+            IHumanResourceService humanResourceService,
+            IConfiguration configuration)
         {
-            _connectionString = connectionString;
             _accountingService = accountingService;
             _humanResourceService = humanResourceService;
+            _connectionString = configuration.GetConnectionString("EmployeeDatabaseConnection");
         }
 
         public async Task<List<Employee>> GetEmployees()

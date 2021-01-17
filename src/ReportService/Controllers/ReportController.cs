@@ -1,14 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ReportService.Business.Managers;
-using System.Net;
-using System.Net.Http;
-using System.Net.Http.Headers;
+using ReportService.ViewModels;
+using System.Text;
 using System.Threading.Tasks;
+using System.Web.Http;
 
 namespace ReportService.Controllers
 {
     [Route("api/[controller]")]
-    public class ReportController : Controller
+    public class ReportController : ApiController
     {
         private readonly ReportManager _reportManager;
 
@@ -19,18 +19,20 @@ namespace ReportService.Controllers
 
         [HttpGet]
         [Route("{year}/{month}")]
-        public async Task<HttpResponseMessage> GetReport(int year, int month)
+        public async Task<IActionResult> GetReport(ReportDate date)
         {
-            var reportString = await _reportManager.BuildReport(year, month);
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-            HttpResponseMessage result = new HttpResponseMessage(HttpStatusCode.OK)
+            var reportString = await _reportManager.BuildReport(date.Year, date.Month);
+
+            var content = Encoding.UTF8.GetBytes(reportString);
+
+            var result = new FileContentResult(content, "application/octet-stream")
             {
-                Content = new StringContent(reportString)
+                FileDownloadName = "report.txt"
             };
 
-            result.Content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
-            result.Content.Headers.ContentDisposition = new ContentDispositionHeaderValue("attachment");
-            result.Content.Headers.ContentDisposition.FileName = "report.txt";
             return result;
         }
     }

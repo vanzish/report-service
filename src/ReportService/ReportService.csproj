@@ -6,34 +6,14 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <Optimize>true</Optimize>
+    <Optimize>false</Optimize>
+    <WarningLevel>5</WarningLevel>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="wwwroot\**" />
-    <Content Remove="wwwroot\**" />
-    <EmbeddedResource Remove="wwwroot\**" />
-    <None Remove="wwwroot\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\app.config.transform" />
-    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlCommand.xml" />
-    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlCommandBuilder.xml" />
-    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlConnection.xml" />
-    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlConnectionStringBuilder.xml" />
-    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlDataAdapter.xml" />
-    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlDataReader.xml" />
-    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlException.xml" />
-    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlHelper.xml" />
-    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlParameter.xml" />
-    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlParameterCollection.xml" />
-    <Content Remove="C:\Users\User\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlTransaction.xml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AppCenter.Push" Version="1.4.0" />
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.WebApiCompatShim" Version="2.0.3" />
   </ItemGroup>
 
   <ItemGroup>

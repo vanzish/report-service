@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
+using ReportService.Business.Managers;
 using ReportService.Data.Interfaces;
 using ReportService.Data.Services;
 using ReportService.Extensions;
@@ -41,6 +42,7 @@ namespace ReportService
             services.AddAccountingClient(Configuration);
             services.AddHumanResourceClient(Configuration);
             services.AddScoped<IEmployeeService, EmployeeService>();
+            services.AddScoped<ReportManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
